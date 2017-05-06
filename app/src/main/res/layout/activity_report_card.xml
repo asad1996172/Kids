@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_report_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/colorPrimary"
+
+    tools:context="com.app.kids.reportCard">
+
+
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="13dp"
+            android:background="@drawable/back"
+            android:shadowRadius="5"
+
+            />
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/home"
+            android:shadowRadius="5"
+
+            />
+
+        <Button
+            android:id="@+id/background_music"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/volume"
+            android:shadowRadius="5"
+
+            />
+
+
+        <Button
+            android:id="@+id/close"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/close"
+            android:shadowRadius="5"
+
+            />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/topbar"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/statusdas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topbar"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <com.github.lzyzsd.circleprogress.ArcProgress
+                    android:id="@+id/arc_progress"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    custom:arc_bottom_text="Learned"
+                    custom:arc_bottom_text_size="17dp"
+                    custom:arc_finished_color="#611e5d"
+                    custom:arc_progress="75"
+                    custom:arc_stroke_width="10dp"
+                    custom:arc_text_color="#ffffff"
+                    custom:arc_unfinished_color="#ffffff"/>
+
+                <com.github.lzyzsd.circleprogress.ArcProgress
+                    android:id="@+id/arc_progress2"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_horizontal"
+                    custom:arc_bottom_text="Tested"
+                    custom:arc_bottom_text_size="17dp"
+
+                    custom:arc_finished_color="#611e5d"
+                    custom:arc_progress="50"
+                    custom:arc_stroke_width="10dp"
+                    custom:arc_text_color="#ffffff"
+                    custom:arc_unfinished_color="#ffffff"/>
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/statusdas"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:clickable="true"
+                card_view:cardCornerRadius="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="casual"
+                    android:text="History"
+
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="25dp"
+
+                    android:textStyle="bold"
+                    />
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_vie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_view"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:clickable="true"
+                android:paddingBottom="10dp"
+                card_view:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="casual"
+                        android:text="12/03/17"
+
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="25dp"
+
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="casual"
+                        android:text="Learning Points Earned : 12"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_view2"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:clickable="true"
+                android:paddingBottom="10dp"
+                card_view:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="casual"
+                        android:text="02/03/17"
+
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="25dp"
+
+                        android:textStyle="bold"
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="casual"
+                        android:text="Testing Points Earned : 15"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="50dp">
+
+                        <com.github.lzyzsd.circleprogress.ArcProgress
+                            android:id="@+id/arc_progress34"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            custom:arc_bottom_text="Right"
+                            custom:arc_finished_color="@color/colorPrimary"
+                            custom:arc_progress="40"
+                            custom:arc_stroke_width="5dp"
+
+                            custom:arc_text_color="@color/colorPrimary"
+                            custom:arc_unfinished_color="#e29dde"/>
+
+                        <com.github.lzyzsd.circleprogress.ArcProgress
+                            android:id="@+id/arc_progress44"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentRight="true"
+
+                            android:layout_gravity="center_horizontal"
+                            custom:arc_bottom_text="Wrong"
+                            custom:arc_finished_color="@color/colorPrimary"
+                            custom:arc_progress="60"
+
+                            custom:arc_stroke_width="5dp"
+                            custom:arc_text_color="@color/colorPrimary"
+                            custom:arc_unfinished_color="#FFE29DDE"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+
+
+
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_vie"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:paddingBottom="10dp"
+                card_view:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="casual"
+                        android:text="05/02/17"
+
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="25dp"
+
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="casual"
+                        android:text="Learning Points Earned : 12"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15dp"
+
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="casual"
+                        android:text="Testing Points Earned : 30"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="50dp">
+
+                        <com.github.lzyzsd.circleprogress.ArcProgress
+                            android:id="@+id/arc_progress3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            custom:arc_bottom_text="Right"
+                            custom:arc_finished_color="@color/colorPrimary"
+                            custom:arc_progress="80"
+                            custom:arc_stroke_width="5dp"
+
+                            custom:arc_text_color="@color/colorPrimary"
+                            custom:arc_unfinished_color="#e29dde"/>
+
+                        <com.github.lzyzsd.circleprogress.ArcProgress
+                            android:id="@+id/arc_progress4"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentRight="true"
+
+                            android:layout_gravity="center_horizontal"
+                            custom:arc_bottom_text="Wrong"
+                            custom:arc_finished_color="@color/colorPrimary"
+                            custom:arc_progress="20"
+
+                            custom:arc_stroke_width="5dp"
+                            custom:arc_text_color="@color/colorPrimary"
+                            custom:arc_unfinished_color="#FFE29DDE"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
